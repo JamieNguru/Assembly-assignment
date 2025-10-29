@@ -1,18 +1,24 @@
+; nasm -f elf64 factorial.asm -o factorial.o
+; gcc main.c factorial.o -o factorial
+; ./factorial
+
 section .text
-    global factorial   ; make the function visible to C
+    global factorial        ; make it visible to C
 
+; long factorial(long n)
 factorial:
-    mov eax, 1         ; result = 1
-    mov ecx, [esp + 4] ; get n (first argument passed by C)
+    mov rax, 1              ; result = 1
+    mov rcx, rdi            ; get n (1st argument in rdi)
 
-    cmp ecx, 1
-    jbe done           ; if n <= 1, return 1
+    cmp rcx, 1
+    jbe .done               ; if n <= 1, return 1
 
-fact_loop:
-    imul eax, ecx      ; eax *= ecx
-    dec ecx
-    cmp ecx, 1
-    jge fact_loop
+.fact_loop:
+    imul rax, rcx           ; rax *= rcx
+    dec rcx
+    cmp rcx, 1
+    jge .fact_loop
 
-done:
+.done:
     ret
+

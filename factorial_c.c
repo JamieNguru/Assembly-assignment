@@ -1,3 +1,5 @@
+//gcc factorial_c.c -o factorial_c
+//./factorial_c
 #include <stdio.h>
 
 int main() {
@@ -18,3 +20,4 @@ int main() {
 
     return 0;
 }
+
