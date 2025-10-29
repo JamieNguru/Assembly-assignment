@@ -83,19 +83,5 @@ Learning highlights:
 
 ---
 
-##  Key Learning Points
-Across all four programs, you learn:
-- How loops (`for`, `inc`, `dec`) are implemented in both C and Assembly  
-- Performing arithmetic operations using registers  
-- How data is stored, accessed, and converted for output  
-- The difference between **32-bit** (Assembly with `int 0x80`) and **64-bit** (Assembly callable from C) programs  
-- Linking and running Assembly with C using GCC and NASM
 
----
-
-##  Requirements
-To run and test these programs, you need:
-- A Linux operating system (preferably 64-bit)
-- The **NASM assembler** to compile Assembly code
-- The **GCC compiler** to compile C programs and link Assembly object files
 
